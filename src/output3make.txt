@@ -1,0 +1,21 @@
+rm -f *.o *.out
+gcc -g -Wall -c -o bch_atlas.o bch_atlas.c
+gcc -g -Wall -c -o stopwatch.o stopwatch.c
+gcc -g -Wall -c -o test_driver.o test_driver.c
+gcc -g -Wall -latlas -lblas -lrt -o bchAtlas.out bch_atlas.o stopwatch.o test_driver.o
+gcc -g -Wall -O1 -c -o bch_atlas.o bch_atlas.c
+gcc -g -Wall -O1 -c -o stopwatch.o stopwatch.c
+gcc -g -Wall -O1 -c -o test_driver.o test_driver.c
+gcc -g -Wall -O1 -latlas -lblas -lrt -o bchAtlas_o1.out bch_atlas.o stopwatch.o test_driver.o
+gcc -g -Wall -O2 -c -o bch_atlas.o bch_atlas.c
+gcc -g -Wall -O2 -c -o stopwatch.o stopwatch.c
+gcc -g -Wall -O2 -c -o test_driver.o test_driver.c
+gcc -g -Wall -O2 -latlas -lblas -lrt -o bchAtlas_o2.out bch_atlas.o stopwatch.o test_driver.o
+gcc -g -Wall -O3 -c -o bch_atlas.o bch_atlas.c
+gcc -g -Wall -O3 -c -o stopwatch.o stopwatch.c
+gcc -g -Wall -O3 -c -o test_driver.o test_driver.c
+gcc -g -Wall -O3 -latlas -lblas -lrt -o bchAtlas_o3.out bch_atlas.o stopwatch.o test_driver.o
+gcc -g -Wall -O3 -funroll-loops -c -o bch_atlas.o bch_atlas.c
+gcc -g -Wall -O3 -funroll-loops -c -o stopwatch.o stopwatch.c
+gcc -g -Wall -O3 -funroll-loops -c -o test_driver.o test_driver.c
+gcc -g -Wall -O3 -funroll-loops -latlas -lblas -lrt -o bchAtlas_o3fun.out bch_atlas.o stopwatch.o test_driver.o

@@ -1,0 +1,23 @@
+PROGRAMS = bchAtlas_o 
+
+CXX = gcc
+CXXFLAGS = -g -Wall
+LDFLAGS = -latlas -lblas -lrt
+
+all:    $(PROGRAMS)
+
+.c.o :
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	
+bchAtlas_o: stopwatch.o
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o bchAtlas_o $(OBJECTS_o)
+
+stopwatch.o:
+	$(CXX) $(CXXFLAGS) -O3 -c -o stopwatch.o stopwatch.c
+
+test_driver.o:
+	$(CXX) $(CXXFLAGS) -O3 -c -o testdriver.o testdriver.c
+
+
+clean:
+	rm -f *.o $(PROGRAM)
