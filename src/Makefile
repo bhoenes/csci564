@@ -1,6 +1,6 @@
 PROGRAM = bchAtlas.out
 CXX = gcc
-CXXFLAGS = -g -Wall -O3
+CXXFLAGS = -g -Wall
 LDFLAGS = -latlas -lblas -lrt
 OBJECTS := $(patsubst %.c,%.o,$(wildcard *.c))
 
@@ -13,4 +13,4 @@ $(PROGRAM): $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS)
 
 clean:
-	rm -f *.o $(PROGRAM)
+	rm -f *.o *.out
