@@ -116,6 +116,7 @@ void step04(const int n, const double A[], const double B[], double C[]) {
 					in = i * n;
 					for(j=jj; j < MIN(jj+t,n); j++) {
 						r = C[in+j];
+						if(
 						for(k=kk; k < kk+t; k+=kfactor) {
 							r += B[in+k] * A[k*n+j];
 						}
