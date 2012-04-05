@@ -78,7 +78,7 @@ void testFunc(void (*func) (const int n, const double A[], const double B[], dou
 	double* cbase;
 	stopwatch* sw = stopwatch_new();
 	
-	for(i = 0; i < 3; i++) {
+	for(i = 0; i < NSTEPS; i++) {
 	  int n = size[i];
 	  int n2 = n * n;
 	  a = (double*) malloc(n2*sizeof(double));
@@ -132,7 +132,12 @@ int main(void) {
 	testFunc(&step02);
 	printf("***step03***\n");
 	testFunc(&step03);
-
+	printf("***step04***\n");
+	testFunc(&step04);
+	printf("***step05a***\n");
+	testFunc(&step05a);
+	printf("***step05***\n");
+	testFunc(&step05);
 	return 0;	
 }
 

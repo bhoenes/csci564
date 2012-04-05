@@ -20,6 +20,7 @@ void step02(const int n, const double A[], const double B[], double C[]);
 void step03(const int n, const double A[], const double B[], double C[]);
 void step04(const int n, const double A[], const double B[], double C[]);
 void step05(const int n, const double A[], const double B[], double C[]);
+void step05a(const int n, const double A[], const double B[], double C[]);
 #endif /* BCHATLAS_H_ */
 
 

@@ -1,6 +1,6 @@
 PROGRAM = bchAtlas.out
 CXX = gcc
-CXXFLAGS = -g -Wall
+CXXFLAGS = -Wall
 LDFLAGS = -latlas -lblas -lrt
 OBJECTS := $(patsubst %.c,%.o,$(wildcard *.c))
 
